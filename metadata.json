@@ -1,0 +1,7 @@
+{
+  "name": "29 Little Stars for Shashank",
+  "description": "A magical, interactive 29th birthday jar filled with 29 paper origami star wishes and a golden love letter for Shashank.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

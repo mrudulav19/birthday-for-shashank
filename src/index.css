@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-handwriting: "Caveat", cursive;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+@keyframes gentle-wobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3.5deg) scale(1.02); }
+  50% { transform: rotate(3deg) scale(1.02); }
+  75% { transform: rotate(-1.5deg) scale(1.01); }
+}
+
+@keyframes float-subtle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(1.5deg); }
+}
+
+@keyframes golden-pulse {
+  0%, 100% { filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.45)); transform: scale(1); }
+  50% { filter: drop-shadow(0 0 28px rgba(251, 191, 36, 0.85)); transform: scale(1.04); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.85); }
+  50% { opacity: 0.95; transform: scale(1.15); }
+}
+
+.animate-gentle-wobble {
+  animation: gentle-wobble 0.75s ease-in-out;
+}
+
+.animate-float-subtle {
+  animation: float-subtle 4s ease-in-out infinite;
+}
+
+.animate-golden-pulse {
+  animation: golden-pulse 3s ease-in-out infinite;
+}
+
+/* Custom delicate parchment texture overlay */
+.bg-parchment {
+  background-color: #faf6ee;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(240, 230, 210, 0.45) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(235, 220, 195, 0.4) 0%, transparent 30%),
+    radial-gradient(circle at 50% 50%, rgba(255, 250, 240, 0.6) 0%, transparent 50%);
+}
+
+/* Glass shine gradient */
+.glass-reflection {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.32) 0%,
+    rgba(255, 255, 255, 0.08) 40%,
+    transparent 60%,
+    rgba(255, 255, 255, 0.15) 100%
+  );
+}
+
+/* Custom scrollbar for letter */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.5);
+}
